@@ -3,7 +3,9 @@ vim.g.loaded_netrwPlugin = 1
 vim.g.mapleader = " "
 vim.opt.termguicolors = true
 vim.opt.number = true
-
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
 
 -- Plugin Manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -23,6 +25,7 @@ require("lazy").setup("plugins")
 
 -- Personal editor settings
 require "lua/keymaps"
+require "lua/alpha-config"
 
 -- Set colorscheme
 vim.cmd("colorscheme kanagawa-dragon")
@@ -31,3 +34,11 @@ vim.cmd("colorscheme kanagawa-dragon")
 require("nvim-tree").setup()
 require("bufferline").setup()
 require("lualine").setup()
+require("telescope").setup({
+    defaults = {
+        file_ignore_patterns = {
+            ".git",
+            "node_modules"
+        }
+    }
+})
