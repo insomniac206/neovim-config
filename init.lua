@@ -6,6 +6,7 @@ vim.opt.number = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
+vim.opt.cursorline = true
 
 -- Plugin Manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -24,8 +25,8 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
 
 -- Personal editor settings
-require "lua/keymaps"
-require "lua/alpha-config"
+require "keymaps"
+require "alpha-config"
 
 -- Set colorscheme
 vim.cmd("colorscheme kanagawa-dragon")
@@ -38,7 +39,10 @@ require("telescope").setup({
     defaults = {
         file_ignore_patterns = {
             ".git",
-            "node_modules"
+            ".vs",
+            "node_modules",
+            "__pycache__",
+            "x64"
         }
     }
 })
