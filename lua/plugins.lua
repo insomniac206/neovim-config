@@ -1,7 +1,13 @@
 return {
     "rebelot/kanagawa.nvim",
+    "stevearc/dressing.nvim",
     "nvim-tree/nvim-web-devicons",
     "nvim-tree/nvim-tree.lua",
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
+        opts = {}
+    },
     "williamboman/mason.nvim",
     {
         "williamboman/mason-lspconfig.nvim",
