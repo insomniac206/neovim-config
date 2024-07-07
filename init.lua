@@ -11,22 +11,22 @@ vim.opt.cursorline = true
 -- Plugin Manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	})
 end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
 
 -- Personal editor settings
-require "keymaps"
-require "alpha-config"
+require("keymaps")
+require("alpha-config")
 
 -- Set colorscheme
 vim.cmd("colorscheme kanagawa-dragon")
@@ -36,13 +36,13 @@ require("nvim-tree").setup()
 require("bufferline").setup()
 require("lualine").setup()
 require("telescope").setup({
-    defaults = {
-        file_ignore_patterns = {
-            ".git",
-            ".vs",
-            "node_modules",
-            "__pycache__",
-            "x64"
-        }
-    }
+	defaults = {
+		file_ignore_patterns = {
+			".git",
+			".vs",
+			"node_modules",
+			"__pycache__",
+			"x64",
+		},
+	},
 })
