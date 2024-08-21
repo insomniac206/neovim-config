@@ -29,7 +29,7 @@ require("keymaps")
 require("alpha-config")
 
 -- Set colorscheme
-vim.cmd("colorscheme kanagawa-dragon")
+vim.cmd("colorscheme catppuccin-mocha")
 
 -- Plugins
 require("nvim-tree").setup()

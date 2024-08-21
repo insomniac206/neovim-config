@@ -3,6 +3,7 @@ return {
 	"stevearc/dressing.nvim",
 	"nvim-tree/nvim-web-devicons",
 	"nvim-tree/nvim-tree.lua",
+	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		main = "ibl",
