@@ -24,6 +24,7 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
+vim.opt.ttimeoutlen = 10
 
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
