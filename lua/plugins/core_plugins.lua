@@ -17,6 +17,21 @@ return {
     event = 'VeryLazy',
     opts = {},
   },
-  { 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' }, },
+  {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    opts = {
+      tabline = {
+        lualine_a = {
+          {
+            'buffers',
+            show_filename_only = true,
+            hide_filename_extension = false,
+            show_modified_status = true,
+          },
+        },
+      },
+    },
+  },
   { 'windwp/nvim-autopairs', event = 'InsertEnter', opts = {}, },
 }
