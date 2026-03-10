@@ -1,5 +1,5 @@
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+vim.keymap.set('n', '<leader>d', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
@@ -9,3 +9,6 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 vim.keymap.set('n', '<leader>q', '<cmd>q<cr>', { desc = 'Exit Neovim' })
 vim.keymap.set('n', '<leader>w', '<cmd>w<cr>', { desc = 'Save changes' })
+vim.keymap.set('n', '<Tab>', '<cmd>bnext<cr>', { desc = 'Move to next buffer (tab)' })
+vim.keymap.set('n', '<S-Tab>', '<cmd>bprev<cr>', { desc = 'Move to previous buffer (tab)' })
+vim.keymap.set('n', '<S-c>', '<cmd>bdel<cr>', { desc = 'Close current buffer' })
