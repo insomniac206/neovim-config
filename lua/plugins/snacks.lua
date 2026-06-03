@@ -3,7 +3,9 @@ return {
   priority = 1000,
   lazy = false,
   opts = {
-    dashboard = { enabled = true },
+    dashboard = {
+      enabled = true,
+    },
     indent = { enabled = true },
     input = { enabled=  true },
     notifier = { enabled = true },
@@ -31,7 +33,7 @@ return {
       local path = vim.fn.expand("%:p")
       local shell = "bash"
       if path:match("^/mnt/") then
-        shell = "/mnt/c/Program Files/PowerShell/7/pwsh.exe"
+        shell = "'/mnt/c/Program Files/PowerShell/7/pwsh.exe'"
       end
       Snacks.terminal.toggle(shell)
     end, desc = "Toggle Terminal" },
