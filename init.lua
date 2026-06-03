@@ -1,4 +1,5 @@
 require("user.core.options")
 require("user.core.keymaps")
 require("user.core.autocmds")
-require("user.plugins")
+require("user.lazy")
+require("user.lsp")
