@@ -13,4 +13,4 @@ vim.keymap.set('n', '<Tab>', '<cmd>bnext<cr>', { desc = 'Move to next buffer (ta
 vim.keymap.set('n', '<S-Tab>', '<cmd>bprev<cr>', { desc = 'Move to previous buffer (tab)' })
 vim.keymap.set('n', '<S-c>', '<cmd>bdel<cr>', { desc = 'Close current buffer' })
 
-vim.keymap.set('i', '<C-e>', '<Esc>', { desc = 'Escape to normal mode' })
+vim.keymap.set({ 'i', 'v' }, '<C-e>', '<Esc>', { desc = 'Escape to normal mode' })
