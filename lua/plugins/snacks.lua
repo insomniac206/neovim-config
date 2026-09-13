@@ -12,7 +12,6 @@ return {
     quickfile = { enabled = true },
     statuscolumn = { enabled = true },
     explorer = { enabled = true },
-    terminal = { enabled = true },
     picker = {
       enabled = true,
       sources = {
@@ -29,13 +28,5 @@ return {
   },
   keys = {
     { "<leader>e", function() Snacks.picker.explorer() end, desc = "Open File Explorer" },
-    { "<leader>t", function()
-      local path = vim.fn.expand("%:p")
-      local shell = "bash"
-      if path:match("^/mnt/") then
-        shell = "'/mnt/c/Program Files/PowerShell/7/pwsh.exe'"
-      end
-      Snacks.terminal.toggle(shell)
-    end, desc = "Toggle Terminal" },
-  },
+  }
 }
